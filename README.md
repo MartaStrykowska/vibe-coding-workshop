@@ -31,27 +31,44 @@ Use any email address you like. If you already have a Lovable account, just log 
 
 Create a new account at [vercel.com](https://vercel.com) and click **Continue with GitHub**. The free Hobby plan is all you need.
 
-### 🔺 Optional (this is for the advanced users only)
+### 💻 Optional — Claude Code (advanced users only)
 
-If you've never worked in Claude Code using the terminal, here's how to set it up: 
+If you want to work directly in the terminal using Claude Code, here’s how to get set up.
 
-Type this command: (placeholder for a command) curl -fsSL https://claude.ai/install.sh | bash
+**Step 1 — Install Claude Code**
 
-When it’s done, you’ll see “Claude Code successfully installed!”. 
+```bash
+curl -fsSL https://claude.ai/install.sh | bash
+```
 
-Do you have an existing project and want to continue working in it? Use command: 
+When it’s done, you’ll see: `Claude Code successfully installed!`
+
+**Step 2 — Start a session**
+
+Pick one of the three options below depending on your situation:
+
+_I have an existing project folder on my laptop:_
+```bash
 cd /path/to/your/project
 claude
+```
+Replace `/path/to/your/project` with the actual path to your project folder.
 
-Replace path/to/your/project with the path of where your project folder lives on your computer. If you only have Github available and no project folder on your laptop, you need to clone your Github repo to your laptop using this command (replace the name with your repo name): 
+_I only have a GitHub repo (no local folder yet):_
+```bash
 git clone https://github.com/yourusername/your-repo-name.git
 cd your-repo-name
 claude
+```
+Replace `yourusername` and `your-repo-name` with your actual GitHub username and repo name.
 
-Do you want to start from scratch? Type this commands in your Terminal all at once: 
+_I want to start from scratch:_
+```bash
 mkdir my-project-name
 cd my-project-name
 claude
+```
+Replace `my-project-name` with whatever you want to call your project.
 
 ---
 
