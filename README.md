@@ -16,7 +16,6 @@ You'll need three free accounts set up before we start. This takes about 10 minu
 2. Once logged in, click the **+** icon → **New repository**
 3. Name it after your project (e.g. `hello-world`)
 4. Set visibility to **Private**
-5. Click **Create repository**
 
 Your repo URL will look like: `github.com/YourAccount/hello-world`
 
@@ -30,11 +29,33 @@ Use any email address you like. If you already have a Lovable account, just log 
 
 ### 🔺 3. Vercel — sign in with GitHub
 
-Go to [vercel.com](https://vercel.com) and click **Continue with GitHub** — that's it. The free Hobby plan is all you need.
+Create a new account at [vercel.com](https://vercel.com) and click **Continue with GitHub**. The free Hobby plan is all you need.
+
+### 🔺 Optional (this is for the advanced users only)
+
+If you've never worked in Claude Code using the terminal, here's how to set it up: 
+
+Type this command: (placeholder for a command) curl -fsSL https://claude.ai/install.sh | bash
+
+When it’s done, you’ll see “Claude Code successfully installed!”. 
+
+Do you have an existing project and want to continue working in it? Use command: 
+cd /path/to/your/project
+claude
+
+Replace path/to/your/project with the path of where your project folder lives on your computer. If you only have Github available and no project folder on your laptop, you need to clone your Github repo to your laptop using this command (replace the name with your repo name): 
+git clone https://github.com/yourusername/your-repo-name.git
+cd your-repo-name
+claude
+
+Do you want to start from scratch? Type this commands in your Terminal all at once: 
+mkdir my-project-name
+cd my-project-name
+claude
 
 ---
 
-## 💬 Prompt Examples
+## 💬 Starting first with the Plan mode 
 
 Copy, paste, and adapt these in Lovable or any AI coding tool.
 
