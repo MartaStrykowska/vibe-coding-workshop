@@ -100,7 +100,7 @@ Structure the plan like a software engineer would approach it:
 4. Flag any dependencies between phases (e.g. authentication must come before user-specific data)
 5. End with a summary of the full build sequence so I have a clear picture of the journey from start to finish
 ```
-Hit enter. 
+
 ---
 
 ### 💻 Claude Code users
@@ -185,4 +185,97 @@ Keep the layout and functionality exactly the same — only change colours, font
 ```
 Explain what this code does in plain English.
 I'm not a developer — use simple language and flag anything I should be aware of.
+```
+
+---
+
+## 🔐 Security Prompt
+
+Run this after completing any major phase to catch issues before they become problems.
+
+```
+Review what we've just built from a security perspective.
+
+Check for the following:
+- Are any API keys or secrets exposed in the frontend code?
+- Is all user input validated before it reaches the database?
+- Are the correct access rules in place — can users only see and edit their own data?
+- Are there any routes or actions that should require login but currently don't?
+- Is there anything else that looks risky or could be exploited?
+
+For each issue you find, explain it in plain English and suggest how to fix it.
+If everything looks good, confirm that and explain why.
+```
+
+---
+
+## 💻 Useful Terminal Commands (Claude Code users)
+
+These are the commands you'll reach for most often during a session.
+
+| Command | What it does |
+|---|---|
+| `claude` | Start a Claude Code session in the current folder |
+| `/plan` | Enter Plan Mode — think before you build |
+| `/context` | Show what Claude currently knows about your project |
+| `/memory` | View and edit Claude's memory (your CLAUDE.md) |
+| `/clear` | Clear the current conversation and start fresh |
+| `Ctrl + C` | Stop whatever Claude is doing |
+| `exit` | End the session |
+
+**Git commands you'll use alongside Claude:**
+
+```bash
+git status                   # See what files have changed
+git add .                    # Stage all changes
+git commit -m "your message" # Save a snapshot with a description
+git push                     # Push changes to GitHub
+git log --oneline            # See a history of your commits
+```
+
+---
+
+## 🛠️ Troubleshooting Prompts
+
+When things go wrong, these prompts help you get back on track without losing what you've built.
+
+### Something broke after the last change
+```
+Something stopped working after the last change. Here's what I expected to happen:
+[describe expected behaviour]
+
+Here's what's actually happening:
+[describe what you see, paste any error messages]
+
+Please identify what went wrong and fix only that — don't change anything else.
+```
+
+### The app won't start or load
+```
+The app isn't loading. Here's the error I see:
+[paste the error from the terminal or browser console]
+
+What's causing this and how do I fix it?
+```
+
+### Claude did something I didn't want
+```
+The last change wasn't what I intended. Please undo everything from the last response
+and bring the code back to how it was before. Then let's try again — I'll re-explain what I want.
+```
+
+### Something looks wrong but I don't know why
+```
+Something feels off but I can't pinpoint it. Can you review the current state of
+[page or feature name] and flag anything that looks incorrect, incomplete, or inconsistent
+with the rest of the app?
+```
+
+### I'm getting a database or API error
+```
+I'm seeing this error when trying to [action]:
+[paste the error]
+
+This is connected to [database / API name]. What's causing it and how do I fix it?
+Don't change anything else in the project while fixing this.
 ```
