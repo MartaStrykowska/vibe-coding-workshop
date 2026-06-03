@@ -27,6 +27,8 @@ Sign up at: **[https://lovable.dev/invite/P4SRJ30](https://lovable.dev/invite/P4
 
 Use any email address you like. If you already have a Lovable account, just log in during the workshop.
 
+Click here to be added to Marble workspace (500 free credits): **[https://lovable.dev/workspace-invite/45aaaebf-f09b-41ab-a194-06e123207617](https://lovable.dev/workspace-invite/45aaaebf-f09b-41ab-a194-06e123207617)**
+
 ### 🔺 3. Vercel — sign in with GitHub
 
 Create a new account at [vercel.com](https://vercel.com) and click **Continue with GitHub**. The free Hobby plan is all you need.
