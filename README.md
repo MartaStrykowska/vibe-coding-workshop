@@ -72,9 +72,71 @@ Replace `my-project-name` with whatever you want to call your project.
 
 ---
 
-## 💬 Starting first with the Plan mode 
+## 🗺️ Step 1 — Start with Plan Mode
 
-Copy, paste, and adapt these in Lovable or any AI coding tool.
+Before writing a single line of code, use Plan Mode to think through the build like a software engineer would. This keeps you in control of the structure and prevents messy, hard-to-fix code later.
+
+---
+
+### 💜 Lovable users
+
+1. Open your Lovable project
+2. Toggle **Plan Mode on** (top right of the chat panel)
+3. Copy the prompt below, fill in your requirements, and send it
+
+```
+I want to build [describe your tool in 1–2 sentences].
+
+Here are the features it needs:
+- [Feature 1]
+- [Feature 2]
+- [Feature 3]
+(add as many as you need)
+
+Structure the plan like a software engineer would approach it:
+1. Start with the data model — what data needs to be stored and how is it structured?
+2. Break the build into clear, sequential phases — each phase should be small enough to build and test on its own
+3. For each phase, describe: what is being built, what the expected outcome is, and what to test before moving on
+4. Flag any dependencies between phases (e.g. authentication must come before user-specific data)
+5. End with a summary of the full build sequence so I have a clear picture of the journey from start to finish
+```
+Hit enter. 
+---
+
+### 💻 Claude Code users
+
+Type the following slash command to enter Plan Mode:
+```
+/plan
+```
+4. Then paste and fill in this prompt:
+
+```
+I want to build [describe your tool in 1–2 sentences].
+
+Here are the features it needs:
+- [Feature 1]
+- [Feature 2]
+- [Feature 3]
+(add as many as you need)
+
+Think and plan like a senior software engineer:
+1. Start with the data model — what tables, fields, and relationships are needed?
+2. Break the build into clear, sequential phases — each phase should be small enough to build and test independently
+3. For each phase, include: what is being built, the expected outcome, a security check relevant to that phase, and a git commit at the end
+4. Flag dependencies between phases (e.g. set up auth before building user-specific features)
+5. End with a summary of the full sequence
+
+When the plan is finalised, save it as a file called PLAN.md in the root of the project and add it to version control.
+```
+
+> Once the plan is saved, exit Plan Mode and start building phase by phase using the PLAN.md as your guide.
+
+---
+
+## 💬 Prompt Examples — Building Phase by Phase
+
+Use these once your plan is in place. Copy, adapt, and send one at a time.
 
 ### 🚀 Start a new project from scratch
 ```
